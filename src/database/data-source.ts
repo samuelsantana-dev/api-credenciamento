@@ -17,7 +17,7 @@ export const AppDataSource = new DataSource({
   entities: [Company],
   migrations: ["src/database/migrations/*.ts"],
   migrationsTableName: "migrations",
-  synchronize: false,
+  synchronize: true,
   logging: true,
 });
 
