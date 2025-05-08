@@ -20,12 +20,14 @@
       "pg": "^8.15.6",
       "reflect-metadata": "^0.2.2",
       "tsconfig-paths": "^4.2.0",
-      "typeorm": "0.3.23"
+      "typeorm": "^0.3.23"
    },
    "scripts": {
       "build": "tsc",
       "dev:server": "ts-node-dev src/server.ts",
       "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
-      "migration:run": "typeorm-ts-node-commonjs migration:run --dataSource src/database/data-source.ts"
+      "migration:run": "typeorm-ts-node-commonjs migration:run --dataSource src/database/data-source.ts",
+      "start": "npm run build && npm run migration:run && node dist/server.js",
+      "postdeploy": "npm run migrate"
    }
 }
