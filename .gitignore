@@ -1,6 +1,17 @@
+# Pastas de configuração
 .idea/
 .vscode/
+
+# Dependências
 node_modules/
+
+# Diretório de build
 build/
+
+# Arquivos temporários
 tmp/
 temp/
+
+# Arquivos sensíveis ou que não precisam ser versionados
+.env
+package-lock.json
