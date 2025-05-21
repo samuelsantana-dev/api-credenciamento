@@ -32,6 +32,6 @@
       "migration:show": "typeorm-ts-node-commonjs migration:show --dataSource src/database/data-source.ts",
       "migrate": "npm run migration:run",
       "postdeploy": "npm run migrate",
-      "start": "node dist/server.js"
+      "start": "node build/server.js"
    }
 }
