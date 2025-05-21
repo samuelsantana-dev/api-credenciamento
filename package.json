@@ -27,7 +27,7 @@
       "dev:server": "ts-node-dev src/server.ts",
       "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
       "migration:run": "typeorm-ts-node-commonjs migration:run --dataSource src/database/data-source.ts",
-      "start": "npm run build && npm run migration:run && node dist/server.js",
+      "start": "node dist/server.js",
       "postdeploy": "npm run migrate"
    }
 }
