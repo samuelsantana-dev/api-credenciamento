@@ -6,7 +6,7 @@
    "devDependencies": {
       "@types/cors": "^2.8.17",
       "@types/express": "^5.0.1",
-      "@types/node": "^22.15.17",
+      "@types/node": "^22.15.21",
       "ts-node": "^10.9.2",
       "ts-node-dev": "^2.0.0",
       "typeorm": "^0.3.23",
@@ -25,6 +25,7 @@
    "scripts": {
       "build": "tsc",
       "dev:server": "ts-node-dev src/server.ts",
+      "postinstall": "npm run build",
       "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
       "migration:run": "typeorm-ts-node-commonjs migration:run --dataSource src/database/data-source.ts",
       "migration:create": "typeorm-ts-node-commonjs migration:create src/database/migrations/MigrationName",
