@@ -27,8 +27,11 @@
       "dev:server": "ts-node-dev src/server.ts",
       "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
       "migration:run": "typeorm-ts-node-commonjs migration:run --dataSource src/database/data-source.ts",
-      "start": "node dist/server.js",
+      "migration:create": "typeorm-ts-node-commonjs migration:create src/database/migrations/MigrationName",
+      "migration:revert": "typeorm-ts-node-commonjs migration:revert --dataSource src/database/data-source.ts",
+      "migration:show": "typeorm-ts-node-commonjs migration:show --dataSource src/database/data-source.ts",
       "migrate": "npm run migration:run",
-      "postdeploy": "npm run migrate"
+      "postdeploy": "npm run migrate",
+      "start": "node dist/server.js"
    }
 }
