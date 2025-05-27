@@ -6,9 +6,16 @@ dotenv.config();
 export const AppDataSource = new DataSource({
   type: "mysql",
   url: process.env.DATABASE_URL,
-  entities: ["build/entities/*.js"],
-  migrations: ["src/database/migrations/*.ts"], 
+    ssl: {
+        rejectUnauthorized: false
+  },
+  entities: ["build/entities/**/*.js"],
+  migrations: ["build/database/migrations/*.js"], 
   migrationsTableName: "migrations",
+  migrationsRun: true,
   synchronize: true,
   logging: true,
+   extra: {
+        connectionLimit: 5 // Ajuste conforme necessário
+  }
 });
