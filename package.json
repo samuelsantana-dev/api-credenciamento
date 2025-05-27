@@ -9,7 +9,7 @@
       "@types/node": "^22.15.21",
       "ts-node": "^10.9.2",
       "ts-node-dev": "^2.0.0",
-      "typeorm": "^0.3.23",
+      "typeorm": "^0.3.24",
       "typeorm-ts-node-commonjs": "^0.3.20",
       "typescript": "^5.8.3"
    },
