@@ -16,11 +16,11 @@ export const AppDataSource = new DataSource({
   ssl: isProd ? { rejectUnauthorized: false } : undefined,
 
   entities: isProd
-    ? ["./app/entities/**/*.js"]
+    ? ["./build/app/entities/**/*.js"]
     : ["./src/entities/**/*.ts"],
 
   migrations: isProd
-    ? ["./app/database/migrations/*.js"]
+    ? ["./build/app/database/migrations/*.js"]
     : ["./src/database/migrations/*.ts"],
 
   migrationsTableName: "migrations",
