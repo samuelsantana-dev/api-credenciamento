@@ -16,17 +16,17 @@ export const AppDataSource = new DataSource({
   ssl: isProd ? { rejectUnauthorized: false } : undefined,
 
   entities: isProd
-    ? [path.join(__dirname, "entities/**/*.js")]
-    : [path.join(__dirname, "../src/entities/**/*.ts")],
+    ? ["./build/app/entities/**/*.js"]
+    : ["./src/entities/**/*.ts"],
 
   migrations: isProd
-    ? [path.join(__dirname, "database/migrations/*.js")]
-    : [path.join(__dirname, "../src/database/migrations/*.ts")],
+    ? ["./build/app/database/migrations/*.js"]
+    : ["./src/database/migrations/*.ts"],
 
   migrationsTableName: "migrations",
   migrationsRun: true,
-  synchronize: false, // não sincronizar automaticamente em produção
-  logging: !isProd, // log em desenvolvimento
+  synchronize: false,
+  logging: !isProd,
 
   extra: {
     connectionLimit: 5,
