@@ -20,9 +20,9 @@ const PORT = process.env.PORT || 8080;
 AppDataSource.initialize()
   .then(() => {
     console.log("Database connected");
-    
     const server = app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
+      console.log(`Server running at http://localhost:${process.env.PORT || 3000}`);
     });
 
     server.setTimeout(5000);
